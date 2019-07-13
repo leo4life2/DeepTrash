@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AcE-s3-rsC">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="TrashClassifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arskView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EO5-fy-WZq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </arskView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EO5-fy-WZq" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="EO5-fy-WZq" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="EO5-fy-WZq" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="EO5-fy-WZq" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="EO5-fy-WZq" id="YuC-8q-ovz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="21"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="UVk-Mc-y5u">
+            <objects>
+                <viewController id="AcE-s3-rsC" customClass="MenuViewController" customModule="TrashClassifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfK-R0-RHi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za6-7t-MIy">
+                                <rect key="frame" x="43.5" y="358" width="327" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="进入垃圾分类小游戏">
+                                    <color key="titleColor" red="0.99215686270000003" green="0.40784313729999999" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.23529411850000001" green="0.23529411850000001" blue="0.23529411850000001" alpha="0.5" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kff-Xv-DRJ" kind="show" identifier="toGame" id="4hj-Vs-gkh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGe-Ci-kfT">
+                                <rect key="frame" x="79.5" y="475.5" width="255" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="进入垃圾识别器">
+                                    <color key="titleColor" red="0.13725490200000001" green="0.52941176469999995" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="toId" id="kY2-4I-1wK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="进入后连续点击屏幕三次可以回到主界面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn0-nN-PDn">
+                                <rect key="frame" x="51" y="633" width="312" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yGe-Ci-kfT" firstAttribute="centerX" secondItem="APA-yF-nd8" secondAttribute="centerX" id="270-Wp-VKv"/>
+                            <constraint firstItem="qn0-nN-PDn" firstAttribute="top" secondItem="yGe-Ci-kfT" secondAttribute="bottom" constant="102.5" id="4jR-uH-z0y"/>
+                            <constraint firstItem="za6-7t-MIy" firstAttribute="centerX" secondItem="xfK-R0-RHi" secondAttribute="centerXWithinMargins" id="5p0-D6-9Jw"/>
+                            <constraint firstItem="yGe-Ci-kfT" firstAttribute="centerY" secondItem="APA-yF-nd8" secondAttribute="centerY" constant="50" id="AiF-Re-kOb"/>
+                            <constraint firstItem="yGe-Ci-kfT" firstAttribute="top" secondItem="za6-7t-MIy" secondAttribute="bottom" constant="62.5" id="pSd-5l-yPl"/>
+                            <constraint firstItem="qn0-nN-PDn" firstAttribute="centerX" secondItem="APA-yF-nd8" secondAttribute="centerX" id="y3x-q8-Q93"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="APA-yF-nd8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIO-af-8k6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="21"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="9bg-dB-EMx">
+            <objects>
+                <viewController id="kff-Xv-DRJ" customClass="GameViewController" customModule="TrashClassifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aCy-v0-eLZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfY-8S-l95">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WfY-8S-l95" firstAttribute="top" secondItem="aCy-v0-eLZ" secondAttribute="top" id="Fpp-vP-nct"/>
+                            <constraint firstItem="WfY-8S-l95" firstAttribute="trailing" secondItem="0l4-qc-KSa" secondAttribute="trailing" id="Ubk-Fk-8IW"/>
+                            <constraint firstItem="WfY-8S-l95" firstAttribute="bottom" secondItem="0l4-qc-KSa" secondAttribute="bottom" id="Wa2-Eq-gLE"/>
+                            <constraint firstItem="WfY-8S-l95" firstAttribute="leading" secondItem="0l4-qc-KSa" secondAttribute="leading" id="whz-Cq-Xo0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0l4-qc-KSa"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="WfY-8S-l95" id="6cV-Ka-Kf5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zk-9R-rsd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="749"/>
+        </scene>
+    </scenes>
+</document>
